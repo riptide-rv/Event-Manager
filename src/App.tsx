@@ -4,11 +4,13 @@ import SplashScreen from './components/screens/SplashScreen';
 import HomeScreen from './components/screens/HomeScreen';
 import { EventData } from './types';
 import EventDetailsScreen from './components/screens/EventScreen';
+import { LoginScreen } from './components/screens/LoginScreen';
 
 
 
 const App: React.FC = () => {
   const [showHome, setShowHome] = useState(false);
+  
   
   
 
@@ -25,18 +27,27 @@ const App: React.FC = () => {
   const handleButtonClick = () => {
     setShowHome(true);
   };
+  
+  
 
   return (
+    
+   
     <div className="App">
+      
     {!showHome ? (
-      <SplashScreen onButtonClick={() =>setShowHome(true)} />
+      <SplashScreen onButtonClick={handleButtonClick} />
     ) : events.length === 0 ? (
-      <HomeScreen onCreateEvent={() => setShowEventDetails(true)} />
+      <LoginScreen />
     ) : (
       <HomeScreen events={events} onCreateEvent={() => setShowEventDetails(true)} />
     )}
     {showEventDetails && <EventDetailsScreen onSaveEvent={handleCreateEvent} />}
+ 
+
   </div>
+  
+
   );
 };
 
