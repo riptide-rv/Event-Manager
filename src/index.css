@@ -134,6 +134,9 @@
     --ring: 244 52% 79%;
     
   }
+  .body{
+    overscroll-behavior: none
+  }
 }
 
  
