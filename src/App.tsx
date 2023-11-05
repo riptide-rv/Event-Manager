@@ -1,13 +1,25 @@
 import React, { useState } from 'react';
-import SplashScreen from './components/screens/SplashScreen';
+
 import '@/global.css'
 
 
-import { EventData } from './types';
+
 
 import { initializeApp } from 'firebase/app'
+import { getFirestore } from "firebase/firestore";
 import { getAuth } from 'firebase/auth';
+
 import { Link, Outlet } from 'react-router-dom';
+
+import SpaceDashboardIcon from '@mui/icons-material/SpaceDashboard';
+import ListAltIcon from '@mui/icons-material/ListAlt';
+import EventIcon from '@mui/icons-material/Event';
+import PersonIcon from '@mui/icons-material/Person';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ClearIcon from '@mui/icons-material/Clear';
+
+
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyAkH9WiG08Lm84MDJITL0x5rc2X8WO3A7g",
@@ -18,28 +30,19 @@ const firebaseConfig = {
   appId: "1:426731898798:web:078c28ab64ee5cb2aaaa3f",
   measurementId: "G-S8VCJC5VHQ"
 };
-import SpaceDashboardIcon from '@mui/icons-material/SpaceDashboard';
-import ListAltIcon from '@mui/icons-material/ListAlt';
-import EventIcon from '@mui/icons-material/Event';
-import PersonIcon from '@mui/icons-material/Person';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import ClearIcon from '@mui/icons-material/Clear';
-
 
 
 const app = initializeApp(firebaseConfig)
 const auth = getAuth(app);
+const db  =  getFirestore(app);
+
 const App: React.FC = () => {
   const [showHome, setShowHome] = useState(false);
-   const [events, setEvents] = useState<EventData[]>([]);
+
  
   const [showEventDetails, setShowEventDetails] = useState(false);
 
-  const handleCreateEvent = (event: EventData) => {
-    setEvents([...events, event]);
-    setShowEventDetails(false); // Hide event details screen after saving event
-  };
-
+ 
 
   const handleButtonClick = () => {
     setShowHome(true);
