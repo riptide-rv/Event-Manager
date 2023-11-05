@@ -14,9 +14,7 @@ import AuthRoute from './components/AuthRoute.tsx';
 import { Two } from './components/screens/Two.tsx';
 
 import { HomeScreen } from './components/screens/HomeScreen.tsx';
-import { EventCreateDialog } from './components/screens/EventScreen.tsx';
-import path from 'path';
-import { Three } from './components/screens/Three.tsx';
+
 
 
 
