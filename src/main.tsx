@@ -12,10 +12,11 @@ import { LoginScreen } from './components/screens/LoginScreen.tsx';
 import AuthRoute from './components/AuthRoute.tsx';
 
 import { Two } from './components/screens/Two.tsx';
-import { One } from './components/screens/One.tsx';
-import { MainApp } from './components/screens/MainApp.tsx';
-import SplashScreen from './components/screens/SplashScreen.tsx';
+
 import { HomeScreen } from './components/screens/HomeScreen.tsx';
+import { EventCreateDialog } from './components/screens/EventScreen.tsx';
+import path from 'path';
+import { Three } from './components/screens/Three.tsx';
 
 
 
@@ -27,11 +28,15 @@ const router = createBrowserRouter([
     element: <AuthRoute> <App/></AuthRoute>,
     children:[
       {
+      
         path: "one",
-        element: <HomeScreen/>
+        element: <HomeScreen/>,
+        
+        
       }
     ,
     {
+      index: true,
       path: "two",
       element: <Two/>
     }

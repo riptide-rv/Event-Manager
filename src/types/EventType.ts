@@ -9,4 +9,5 @@ export type EventEntity = {
   endDate: Date;
   startTime: string;
   endTime: string;
+  userId: string;
 };

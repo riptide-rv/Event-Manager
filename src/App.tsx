@@ -32,21 +32,12 @@ const firebaseConfig = {
 };
 
 
-const app = initializeApp(firebaseConfig)
+export const app = initializeApp(firebaseConfig)
 const auth = getAuth(app);
 const db  =  getFirestore(app);
 
 const App: React.FC = () => {
-  const [showHome, setShowHome] = useState(false);
-
- 
-  const [showEventDetails, setShowEventDetails] = useState(false);
-
- 
-
-  const handleButtonClick = () => {
-    setShowHome(true);
-  };
+  
   
   
 
@@ -91,7 +82,7 @@ const App: React.FC = () => {
 
           </div>
           <ul className="pt-6">
-            {Menus.map((Menu, index, link) => (
+            {Menus.map((Menu, index) => (
               <Link to = {`${Menu.link}`}>
               <li
                 key={index}
