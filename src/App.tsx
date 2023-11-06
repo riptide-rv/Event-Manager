@@ -56,13 +56,13 @@ const App: React.FC = () => {
         <div className="flex h-screen overflow-hidden">
         <div
           className={` ${
-            open ? "w-72" : "w-20 "
-          } bg-card  p-5  pt-8 relative duration-300 flex-shrink-0`}
+            open ? "w-72" : "w-16 sm:w-20"
+          } bg-card  p-3 sm:p-5  pt-8 relative duration-300 flex-shrink-0`}
         >
           
           
             {!open && <ArrowForwardIcon
-                     className={`absolute cursor-pointer right-6 duration-100 ease-in-out top-9 w-7  rounded-full `}
+                     className={`absolute cursor-pointer right-4 sm:r-6 duration-100 ease-in-out top-9 w-7  rounded-full `}
             onClick={() => setOpen(!open)}
             color="primary"
             />}
