@@ -9,4 +9,5 @@ export const newEventFormSchema = z.object({
   startTime: z.string(),
   endDate: z.date(),
   endTime: z.string(),
+  
 })

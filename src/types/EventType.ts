@@ -3,6 +3,7 @@
 
 
 export type EventEntity = {
+  id: string;
   eventName: string;
   description: string;
   startDate: Date;

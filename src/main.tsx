@@ -14,6 +14,7 @@ import AuthRoute from './components/AuthRoute.tsx';
 import { Two } from './components/screens/Two.tsx';
 
 import { HomeScreen } from './components/screens/HomeScreen.tsx';
+import { ViewEventScreen } from './components/screens/ViewEventScreen.tsx';
 
 
 
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
     path:"/login",
     element: <LoginScreen/>
 
+  },
+  {
+    path:'/view/:eventId',
+    element:<ViewEventScreen/>
   }
 ]);
 
