@@ -8,13 +8,14 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import { LoginScreen } from './components/screens/LoginScreen.tsx';
-import AuthRoute from './components/AuthRoute.tsx';
+import { LoginScreen } from './screens/LoginScreen.tsx';
+import AuthRoute from './AuthRoute.tsx';
 
-import { Two } from './components/screens/Two.tsx';
+import { Two } from './screens/Two.tsx';
 
-import { HomeScreen } from './components/screens/HomeScreen.tsx';
-import { ViewEventScreen } from './components/screens/ViewEventScreen.tsx';
+import { HomeScreen } from './screens/HomeScreen.tsx';
+import { ViewEventScreen } from './screens/ViewEventScreen.tsx';
+import { SignUpScreen } from './screens/SignUpScreen.tsx';
 
 
 
@@ -27,7 +28,6 @@ const router = createBrowserRouter([
     element: <AuthRoute> <App/></AuthRoute>,
     children:[
       {
-      
         path: "one",
         element: <HomeScreen/>,
         
@@ -51,6 +51,10 @@ const router = createBrowserRouter([
   {
     path:'/view/:eventId',
     element:<ViewEventScreen/>
+  },
+  {
+    path:"/signup",
+    element:<SignUpScreen/>
   }
 ]);
 

@@ -9,11 +9,12 @@ import { initializeApp } from 'firebase/app'
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from 'firebase/auth';
 
+
 import { Link, Outlet } from 'react-router-dom';
 
-import SpaceDashboardIcon from '@mui/icons-material/SpaceDashboard';
+
 import ListAltIcon from '@mui/icons-material/ListAlt';
-import EventIcon from '@mui/icons-material/Event';
+
 import PersonIcon from '@mui/icons-material/Person';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ClearIcon from '@mui/icons-material/Clear';
@@ -22,30 +23,38 @@ import ClearIcon from '@mui/icons-material/Clear';
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAkH9WiG08Lm84MDJITL0x5rc2X8WO3A7g",
-  authDomain: "event-manager-f1350.firebaseapp.com",
-  projectId: "event-manager-f1350",
-  storageBucket: "event-manager-f1350.appspot.com",
-  messagingSenderId: "426731898798",
-  appId: "1:426731898798:web:078c28ab64ee5cb2aaaa3f",
-  measurementId: "G-S8VCJC5VHQ"
+  // apiKey: "AIzaSyAkH9WiG08Lm84MDJITL0x5rc2X8WO3A7g",
+  // authDomain: "event-manager-f1350.firebaseapp.com",
+  // projectId: "event-manager-f1350",
+  // storageBucket: "event-manager-f1350.appspot.com",
+  // messagingSenderId: "426731898798",
+  // appId: "1:426731898798:web:078c28ab64ee5cb2aaaa3f",
+  // measurementId: "G-S8VCJC5VHQ"
+  apiKey: "AIzaSyBpwB2BeRuKfCx2_YWMXSkuxfuO3BE6TM4",
+  authDomain: "event-manage-61bbf.firebaseapp.com",
+  projectId: "event-manage-61bbf",
+  storageBucket: "event-manage-61bbf.appspot.com",
+  messagingSenderId: "448780147580",
+  appId: "1:448780147580:web:a52fc0d7ccce1856eca2f9",
+  measurementId: "G-KH8WC96N7W"
 };
 
 
 export const app = initializeApp(firebaseConfig)
-const auth = getAuth(app);
-const db  =  getFirestore(app);
+getAuth(app);
+getFirestore(app);
+
 
 const App: React.FC = () => {
   
   
   
 
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
     const Menus = [
-      { title: "Dashboard", src: "Chart_fill" ,link:"/one", icon: <SpaceDashboardIcon/>},
+      
       { title: "Events", src: "Chat", link:"/one", icon: <ListAltIcon/>},
-       { title: "Calender ", src: "Calendar" ,link:"/two", icon: <EventIcon/>},
+       
       { title: "Profile", src: "Search", link:"/two", icon:<PersonIcon  /> },
       
 
