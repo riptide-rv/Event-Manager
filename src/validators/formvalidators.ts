@@ -11,3 +11,12 @@ export const newEventFormSchema = z.object({
   endTime: z.string(),
   
 })
+
+export const newSubEventFormSchema = z.object({
+  subEventName: z.string().min(2).max(50),
+  subEventDescription: z.string().min(0).max(1000),
+  subEventDate: z.date(),
+  subEventStartTime: z.string(),
+  subEventEndTime: z.string(),
+
+})

@@ -12,3 +12,7 @@
  .nonscroll {
     overscroll-behavior: none;
   }
+
+  input{
+    color-scheme: dark;
+  }
